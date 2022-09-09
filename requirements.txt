@@ -1,0 +1,6 @@
+boto3
+faker
+chalice
+localstack
+chalice-local
+awscli-local

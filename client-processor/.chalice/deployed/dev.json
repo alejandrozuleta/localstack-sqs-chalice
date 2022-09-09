@@ -1,0 +1,25 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::000000000000:role/client-processor-dev",
+      "role_name": "client-processor-dev"
+    },
+    {
+      "name": "process_client_signup_event",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:000000000000:function:client-processor-dev-process_client_signup_event"
+    },
+    {
+      "name": "process_client_signup_event-sqs-event-source",
+      "resource_type": "sqs_event",
+      "queue_arn": "arn:aws:sqs:us-east-1:000000000000:TestStandardQueue",
+      "event_uuid": "6162549a-72fe-4e43-b74f-8fc0a0c47cef",
+      "queue": "TestStandardQueue",
+      "lambda_arn": "arn:aws:lambda:us-east-1:000000000000:function:client-processor-dev-process_client_signup_event"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
